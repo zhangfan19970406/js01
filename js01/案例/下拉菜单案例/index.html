@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>下拉菜单</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        a{
+            text-decoration: none;;
+        }
+        ul{
+            list-style:none;
+        }
+        .wrap{
+            margin:100px auto;
+            width:330px;
+            height: 30px;
+            background-image: url("images/bg.jpg");
+            padding-left:10px;
+
+        }
+        .wrap li{
+            float: left;
+            width: 100px;
+            margin-right:10px;
+        }
+        .wrap li ul{
+            display: none;
+        }
+        .wrap a{
+            display: block;
+            width:100px;
+
+            line-height:30px;
+            text-align: center;
+            background-image: url("images/libg.jpg");
+            
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <ul>
+        <li>
+            <a href="#">一级菜单</a>
+            <ul>
+                <li><a href="#">二级菜单</a></li>
+                <li><a href="#">二级菜单</a></li>
+                <li><a href="#">二级菜单</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">一级菜单</a>
+            <ul>
+                <li><a href="#">二级菜单</a></li>
+                <li><a href="#">二级菜单</a></li>
+                <li><a href="#">二级菜单</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">一级菜单</a>
+            <ul>
+                <li><a href="#">二级菜单</a></li>
+                <li><a href="#">二级菜单</a></li>
+                <li><a href="#">二级菜单</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<script src="../jquery-1.11.1.min.js"></script>
+<script>
+    $(function () {
+        $(".wrap li").hover(function () {
+            $(this).children("ul").stop().slideToggle(700);
+        })
+
+    })
+</script>
+</body>
+</html>
